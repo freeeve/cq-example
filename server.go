@@ -209,5 +209,5 @@ func main() {
 	serveMux.HandleFunc("/movie/", movieHandler)
 	serveMux.HandleFunc("/graph", graphHandler)
 
-	panic(http.ListenAndServe("localhost:8080", httpgzip.NewHandler(serveMux)))
+	panic(http.ListenAndServe("localhost:"+os.Getenv("PORT"), httpgzip.NewHandler(serveMux)))
 }
