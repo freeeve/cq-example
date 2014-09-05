@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 
 	"github.com/daaku/go.httpgzip"
@@ -196,7 +197,9 @@ func graphHandler(w http.ResponseWriter, req *http.Request) {
 }
 
 func init() {
-	//neo4jURL = os.Getenv("GRAPHENE_NEO4J_DB")
+	if os.Getenv("GRAPHENEDB_URL") != "" {
+		neo4jURL = os.Getenv("GRAPHENEDB_URL")
+	}
 }
 
 func main() {
@@ -206,5 +209,5 @@ func main() {
 	serveMux.HandleFunc("/movie/", movieHandler)
 	serveMux.HandleFunc("/graph", graphHandler)
 
-	panic(http.ListenAndServe("localhost:9000", httpgzip.NewHandler(serveMux)))
+	panic(http.ListenAndServe("localhost:8080", httpgzip.NewHandler(serveMux)))
 }
