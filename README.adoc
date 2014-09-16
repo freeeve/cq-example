@@ -43,7 +43,15 @@ Go to http://localhost:8080
 
 You can search for movies by title or and click on any entry .
 
-=== Deploy to Heroku
+=== Deploy to Heroku using Heroku button
+
+This button will walk you through the deployment just with a few clicks. It will add the free plan of the link:https://addons.heroku.com/graphenedb[GrapheneDB add-on].
+
+link:https://heroku.com/deploy[image:https://www.herokucdn.com/deploy/button.png[Deploy]]
+
+Done!
+
+=== Deploy to Heroku manually
 
 [source,shell]
 ----

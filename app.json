@@ -1,0 +1,10 @@
+{
+  "name": "neo4j-cq-template",
+  "description": "A template app for using Neo4j from Go, using the cq driver. Deployment using GrapheneDB.",
+  "website": "https://github.com/go-cq/cq",
+  "keywords": ["golang", "neo4j"],
+  "addons": ["graphenedb:chalk"],
+  "env": {
+    "BUILDPACK_URL": "https://github.com/kr/heroku-buildpack-go"
+   }
+}
