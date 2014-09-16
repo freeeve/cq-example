@@ -73,3 +73,9 @@ git commit -a -m 'Heroku / deps'
 # push to heroku 
 git push heroku master
 ----
+
+=== Populate the data in GrapheneDB (via Heroku addon)
+
+Run `heroku addons:open graphenedb`, navigate to the "Neo4j Web Admin interface"
+
+Run the `:play movies` command.
